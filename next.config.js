@@ -22,6 +22,12 @@ const nextConfig = {
       },
     ],
   },
+  // Future CORS configuration for Next.js major versions
+  allowedDevOrigins: [
+    'https://fricaapp.com',
+    'http://fricaapp.com',
+    'https://www.fricaapp.com'
+  ],
 };
 
 module.exports = nextConfig;
