@@ -6,6 +6,7 @@ import { NavLinkStyle } from "../NavBar.style";
 import dynamic from "next/dynamic";
 
 const NavLinks = ({ zoneid, t, moduleType }) => {
+  console.log("thisis", moduleType);
   const [openCategoryModal, setCategoryModal] = useState(false);
   const [openRestaurantModal, setRestaurantModal] = useState(false);
   const NavStore = dynamic(() => import("./NavStore"), {
