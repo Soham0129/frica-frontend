@@ -329,3 +329,69 @@ button.gm-ui-hover-effect  {
     height: 9px !important;
     left: 7px !important;
 }
+
+/* Logo theme switching */
+html[data-mui-color-scheme="dark"] .logo-dark {
+  display: block !important;
+}
+
+html[data-mui-color-scheme="dark"] .logo-light {
+  display: none !important;
+}
+
+html[data-mui-color-scheme="light"] .logo-dark {
+  display: none !important;
+}
+
+html[data-mui-color-scheme="light"] .logo-light {
+  display: block !important;
+}
+
+body[data-theme="dark"] .logo-dark {
+  display: block !important;
+}
+
+body[data-theme="dark"] .logo-light {
+  display: none !important;
+}
+
+body[data-theme="light"] .logo-dark {
+  display: none !important;
+}
+
+body[data-theme="light"] .logo-light {
+  display: block !important;
+}
+
+/* Footer logo theme switching */
+html[data-mui-color-scheme="dark"] .footer-logo-dark {
+  display: block !important;
+}
+
+html[data-mui-color-scheme="dark"] .footer-logo-light {
+  display: none !important;
+}
+
+html[data-mui-color-scheme="light"] .footer-logo-dark {
+  display: none !important;
+}
+
+html[data-mui-color-scheme="light"] .footer-logo-light {
+  display: block !important;
+}
+
+body[data-theme="dark"] .footer-logo-dark {
+  display: block !important;
+}
+
+body[data-theme="dark"] .footer-logo-light {
+  display: none !important;
+}
+
+body[data-theme="light"] .footer-logo-dark {
+  display: none !important;
+}
+
+body[data-theme="light"] .footer-logo-light {
+  display: block !important;
+}

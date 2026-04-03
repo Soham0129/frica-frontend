@@ -2,6 +2,8 @@ import { useRouter } from "next/router";
 import { styled } from "@mui/material";
 import CustomImageContainer from "../CustomImageContainer";
 import NextImage from "components/NextImage";
+import { useSettings } from "../../contexts/use-settings";
+import { useEffect } from "react";
 
 export const Logo = styled("div")(({ height, width }) => ({
   maxWidth: width,
@@ -17,6 +19,15 @@ export const Logo = styled("div")(({ height, width }) => ({
 }));
 const CustomLogo = ({ logoImg, atlText, height, width, objectFit }) => {
   const router = useRouter();
+  const { settings } = useSettings(); // Get theme state
+  
+  // Set data-theme on body for alternative selector
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      document.body.setAttribute('data-theme', settings.theme);
+    }
+  }, [settings.theme]);
+  
   let location = undefined;
   if (typeof window !== "undefined") {
     location = localStorage.getItem("location");
@@ -42,6 +53,18 @@ const CustomLogo = ({ logoImg, atlText, height, width, objectFit }) => {
         loading="eager"
         width={150}
         height={100}
+        data-theme={settings.theme}
+        className="logo-light"
+      />
+      <NextImage
+        src="/images/darkmode-frica-logo.png"
+        alt={atlText}
+        objectFit={objectFit ? objectFit : "contain"}
+        loading="eager"
+        width={150}
+        height={100}
+        className="logo-dark"
+        style={{ display: 'none' }}
       />
     </Logo>
   );

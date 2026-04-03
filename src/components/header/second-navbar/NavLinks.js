@@ -4,9 +4,8 @@ import Link from "next/link";
 import { NavLinkStyle } from "../NavBar.style";
 
 import dynamic from "next/dynamic";
-
+console.log(process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY);
 const NavLinks = ({ zoneid, t, moduleType }) => {
-  console.log("thisis", moduleType);
   const [openCategoryModal, setCategoryModal] = useState(false);
   const [openRestaurantModal, setRestaurantModal] = useState(false);
   const NavStore = dynamic(() => import("./NavStore"), {
