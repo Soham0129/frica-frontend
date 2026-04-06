@@ -393,7 +393,7 @@ const SecondNavBar = ({ configData }) => {
             width="150px"
             configData={configData}
             objectFit="contain"
-            aspectRatio="3:1"
+            aspectRatio="2:1"
           />
         )}
         {!isSmall && location && (

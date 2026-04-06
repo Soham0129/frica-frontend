@@ -62,7 +62,7 @@ const CustomLogo = ({ logoImg, atlText, height, width, objectFit }) => {
         objectFit={objectFit ? objectFit : "contain"}
         loading="eager"
         width={150}
-        height={100}
+        height={70}
         className="logo-dark"
         style={{ display: 'none' }}
       />

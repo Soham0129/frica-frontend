@@ -65,14 +65,15 @@ const FooterMiddle = (props) => {
                 justifyContent: { xs: "center", sm: "flex-start" },
                 alignItems: "center",
                 mb: { xs: "20px", sm: "0px" },
+                height: "70px",
               }}
             >
               {/* Light theme logo */}
               <NextImage
                 src={businessLogo}
                 alt={`${configData?.business_name}`}
-                width={150}
-                height={50}
+                width={120}
+                height={70}
                 objectfit="contain"
                 className="footer-logo-light"
               />
@@ -80,8 +81,8 @@ const FooterMiddle = (props) => {
               <NextImage
                 src="/images/darkmode-frica-logo.png"
                 alt={`${configData?.business_name}`}
-                width={75}
-                height={50}
+                width={120}
+                height={70}
                 objectfit="contain"
                 className="footer-logo-dark"
                 style={{ display: 'none' }}
