@@ -10,7 +10,7 @@ const getModule = async () => {
 
 export default function useGetModule() {
   return useQuery("module-list", getModule, {
-    enabled: false,
+    enabled: true,  // Changed from false to true to allow API call
     onError: onErrorResponse,
   });
 }
