@@ -39,7 +39,8 @@ const TopBanner = () => {
       case ModuleTypes.RENTAL:
         return alpha(theme.palette.primary.main, 0.05);
       default:
-        return "inherit";
+        //return "inherit";
+        return alpha(theme.palette.primary.main, 0.04);
     }
   };
   const getBGImage = () => {
@@ -54,12 +55,12 @@ const TopBanner = () => {
         return foodBanner?.src;
       case ModuleTypes.PARCEL:
         return parcelImage?.src;
-
+      case ModuleTypes.RENTAL:
+        return null; // Rental uses SVG background, not image
       default:
-        return "inherit";
+        return banner?.src; // Fallback to default banner
     }
   };
-  // if (!moduleType) return null;
 
   return (
     <CustomBoxFullWidth
@@ -111,11 +112,11 @@ const TopBanner = () => {
             height={122}
           />
         </Box>
-      ) : (
+      ) : getBGImage() ? (
         <Box sx={{ position: "absolute", height: "100%", width: "100%", "img": { objectFit: "cover", width: "100%", height: "100%" } }}>
           <Image width={1917} height={270} src={getBGImage()} alt="banner" priority={true} />
         </Box>
-      )}
+      ) : null}
     </CustomBoxFullWidth>
   );
 };
